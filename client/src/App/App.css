@@ -1,0 +1,64 @@
+/*--------------- App.js -----------------*/
+
+/*Navigation Style on all pages*/
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #214172;
+  padding: 4rem;
+  margin: -0.5rem;
+  color: white;
+}
+
+.nav a {
+  text-decoration-line: none;
+  color: white;
+  font-size: larger;
+}
+
+nav a:hover {
+  color: #99b7e3;
+}
+
+.Zak {
+    font-size: xx-large;
+}
+
+/*Skip Link Style on all pages*/
+.skip-link {
+  position: absolute;
+  width: .25rem;
+  height: .25rem;
+  padding: 0;
+  margin: -.25rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.skip-link:focus {
+  background: white;
+  clip: auto;
+  height: auto;
+  left: 10px;
+  padding: 1rem;
+  position: fixed;
+  top: 0px;
+  width: auto;
+  z-index: 1001;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+}
+
+.footer > a {
+  margin: 1rem;
+  text-decoration: none;
+  color: black;
+  font-size: medium;
+}

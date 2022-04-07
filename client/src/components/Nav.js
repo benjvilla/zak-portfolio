@@ -7,9 +7,9 @@ export default function Nav(){
         <>
         {/* /*Navigation Links */}
         <Link to ="/">Home</Link>
-        <Link to = "/Portfolio">Portfolio</Link>
-        <Link to = "/Materials">Materials</Link>
-        <Link to = "/Contact">Contact</Link>
+        <Link to = "/portfolio">Portfolio</Link>
+        <Link to = "/materials">Materials</Link>
+        <Link to = "/contact">Contact</Link>
         </>
     );
 }
