@@ -49,7 +49,19 @@ export default function Materials() {
         </p>
       </div>
       <div>
-        <button class="button"></button>
+        <img 
+          class="" 
+          src="https://d3j0t7vrtr92dk.cloudfront.net/market/1588072009_Persevere%20During%20Setbacks.png?" 
+          alt="Persevere During Setbacks (VD092)"
+          title="Persevere During Setbacks (VD092)"
+        />
+        <a
+          id="perseveringLink"
+          href="https://zakariahrittenhouse.talentlms.com/trainer/course/id:129"
+          target="_blank"
+        >
+          <button class="button">Go To Persevere During Setbacks (VD092)</button>
+        </a>
         <p>
           "Persevering when bad things happen isn’t always easy. Sometimes the
           negative event seems too big to overcome, causing us to get stuck and
