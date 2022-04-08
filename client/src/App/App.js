@@ -2,6 +2,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from "../components/Nav.js";
 import Portfolio from "../components/Portfolio";
 import Materials from "../components/Materials";
