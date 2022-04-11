@@ -1,16 +1,22 @@
+//imports
 import React from "react";
 
+//Materials page content
 export default function Materials() {
+
   return (
     <div>
+      {/* header for materials page */}
       <h2>Materials Page! (placeholder)</h2>
       <div>
+        {/* image for Intro to LMS */}
         <img
           class="avatar-square catalog-course-logo course-info_avatar--img animated fadeIn"
           src="https://d3j0t7vrtr92dk.cloudfront.net/samplecourses/1548346756_intro.png?"
           alt="Introduction to TalentLMS (001)"
           title="Introduction to TalentLMS (001)"
         />
+        {/* button to link to lms website */}
         <a
           id=""
           href="https://zakariahrittenhouse.talentlms.com/catalog/info/id:123"
