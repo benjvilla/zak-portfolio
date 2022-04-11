@@ -8,18 +8,32 @@ import {
   CardImg,
   CardBody,
   CardText,
+  Accordion,
+  AccordionItem,
+  AccordionHeader,
+  Collapse,
+  Container
+
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NEOWeek1 from "../images/New Hire Orientation - Week 1.jpg";
 
 export default function Portfolio() {
+
   return (
     <>
-      <CardColumns className="item-center">
+    <Container>
+    <div class="container">
+  <div class="row">
+    <div class="col">
+      <CardColumns className="card-item-center">
+        {/* Card 1 */}
         <Card
           style={{
-            width: "30rem",
-            margin: "3rem",
+            width: "40rem",
+            marginTop: "3rem"
+            // display: "flex",
+            // flexDirection: 'center'
           }}
         >
           <CardImg
@@ -28,6 +42,7 @@ export default function Portfolio() {
             top
             width="100%"
           />
+          
           <CardBody>
             <CardTitle tag="h5">Card title</CardTitle>
             <CardSubtitle className="mb-2 text-muted" tag="h6">
@@ -38,69 +53,51 @@ export default function Portfolio() {
               lead-in to additional content. This content is a little bit
               longer.
             </CardText>
-            <Button>Button</Button>
+  {/* Accordion  */}
+  <div className="accordion accordion-flush">
+  <Accordion
+    open="1"
+    toggle={function noRefCheck(){}}
+  >
+    <AccordionItem>
+      <AccordionHeader targetId="1">
+        Accordion Item 1
+      </AccordionHeader>
+      <AccordionItem accordionId="1">
+      
+        <strong>
+          This is the first item's accordion body.
+        </strong>
+        You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the{' '}
+        <code>
+          .accordion-body
+        </code>
+        , though the transition does limit overflow.
+      </AccordionItem>
+      
+    </AccordionItem>
+    
+    </Accordion>
+</div>
+{/* Accordian End */}
           </CardBody>
         </Card>
+        {/* Card 2 */}
         <Card
           style={{
-            width: "30rem",
-            margin: "3rem",
+            width: "40rem",
+            marginTop: "3rem"
+            // display: "flex",
+            // flexDirection: 'center'
           }}
         >
           <CardImg
-            alt="Card image cap"
-            src="https://picsum.photos/256/186"
+            alt="New Hire Orientation Week 1"
+            src={NEOWeek1}
             top
             width="100%"
           />
-        </Card>
-        <Card
-          style={{
-            width: "30rem",
-            margin: "3rem",
-          }}
-        >
-          <CardBody>
-            <CardTitle tag="h5">Card title</CardTitle>
-            <CardSubtitle className="mb-2 text-muted" tag="h6">
-              Card subtitle
-            </CardSubtitle>
-            <CardText>
-              This card has supporting text below as a natural lead-in to
-              additional content.
-            </CardText>
-            <Button>Button</Button>
-          </CardBody>
-        </Card>
-        <Card
-          body
-          inverse
-          style={{
-            backgroundColor: "#333",
-            borderColor: "#333",
-            width: "30rem",
-            margin: "3rem",
-          }}
-        >
-          <CardTitle tag="h5">Special Title Treatment</CardTitle>
-          <CardText>
-            With supporting text below as a natural lead-in to additional
-            content.
-          </CardText>
-          <Button>Button</Button>
-        </Card>
-        <Card
-          style={{
-            width: "30rem",
-            margin: "3rem",
-          }}
-        >
-          <CardImg
-            alt="Card image cap"
-            src="https://picsum.photos/256/186"
-            top
-            width="100%"
-          />
+          
           <CardBody>
             <CardTitle tag="h5">Card title</CardTitle>
             <CardSubtitle className="mb-2 text-muted" tag="h6">
@@ -108,29 +105,92 @@ export default function Portfolio() {
             </CardSubtitle>
             <CardText>
               This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
+              lead-in to additional content. This content is a little bit
+              longer.
             </CardText>
-            <Button>Button</Button>
+  {/* Accordion  */}
+  <div>
+  <Accordion
+    open="1"
+    toggle={function noRefCheck(){
+    }}
+  >
+    <AccordionItem>
+      <AccordionHeader targetId="1">
+        Accordion Item 1
+      </AccordionHeader>
+      <AccordionItem accordionId="1">
+        <strong>
+          This is the first item's accordion body.
+        </strong>
+        You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the{' '}
+        <code>
+          .accordion-body
+        </code>
+        , though the transition does limit overflow.
+      </AccordionItem>
+    </AccordionItem>
+    </Accordion>
+</div>
           </CardBody>
         </Card>
+        {/****Card 3 ****/}
         <Card
-          body
-          color="primary"
-          inverse
           style={{
-            width: "30rem",
-            margin: "3rem",
+            width: "40rem",
+            marginTop: "3rem"
+            // display: "flex",
+            // flexDirection: 'center'
           }}
         >
-          <CardTitle tag="h5">Special Title Treatment</CardTitle>
-          <CardText>
-            With supporting text below as a natural lead-in to additional
-            content.
-          </CardText>
-          <Button>Button</Button>
+          <CardImg
+            alt="New Hire Orientation Week 1"
+            src={NEOWeek1}
+            top
+            width="100%"
+          />
+          
+          <CardBody>
+            <CardTitle tag="h5">Card title</CardTitle>
+            <CardSubtitle className="mb-2 text-muted" tag="h6">
+              Card subtitle
+            </CardSubtitle>
+            <CardText>
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </CardText>
+  {/* Accordion  */}
+  <div>
+  <Accordion
+    open="1"
+    toggle={function noRefCheck(){
+    }}
+  >
+    <AccordionItem>
+      <AccordionHeader targetId="1">
+        Accordion Item 1
+      </AccordionHeader>
+      <AccordionItem accordionId="1">
+        <strong>
+          This is the first item's accordion body.
+        </strong>
+        You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the{' '}
+        <code>
+          .accordion-body
+        </code>
+        , though the transition does limit overflow.
+      </AccordionItem>
+    </AccordionItem>
+    </Accordion>
+</div>
+          </CardBody>
         </Card>
-      </CardColumns>
+        </CardColumns>
+      </div>
+  </div>
+</div>
+</Container>
     </>
   );
 }
