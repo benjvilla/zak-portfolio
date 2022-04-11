@@ -52,10 +52,20 @@ nav a:hover {
 /*--------------- Portfoli Page -----------------*/
 /* card style*/
 
-.col {
+/* .col {
+  display: flex;
+  justify-content: center;
+} */
+
+.container{
   display: flex;
   justify-content: center;
 }
+
+.card{
+  margin: 2rem;
+}
+
 
 /* Footer */
 .footer {
