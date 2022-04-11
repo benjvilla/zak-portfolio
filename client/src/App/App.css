@@ -7,7 +7,6 @@
   align-items: center;
   background-color: #214172;
   padding: 4rem;
-  margin: -0.5rem;
   color: white;
 }
 
@@ -23,6 +22,12 @@ nav a:hover {
 
 .Zak {
     font-size: xx-large;
+}
+
+/* Page Below Navs */
+.main {
+  margin: 1rem;
+  margin-top: 2rem;
 }
 
 /*Skip Link Style on all pages*/
@@ -49,19 +54,10 @@ nav a:hover {
   z-index: 1001;
 }
 
-/*--------------- Portfoli Page -----------------*/
-/* card style*/
-
-.col {
-  display: flex;
-  justify-content: center;
-}
-
 /* Footer */
 .footer {
   display: flex;
   justify-content: center;
-  bottom: 0;
 }
 
 .footer > a {
@@ -69,4 +65,34 @@ nav a:hover {
   text-decoration: none;
   color: black;
   font-size: medium;
+  font-weight: 700;
 }
+
+/* Logos at the Footer */
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3vh;
+  margin: 1rem;
+  margin-top: 3rem;
+}
+
+.footerWithSocials {
+  display: flex;
+  flex-direction: column;
+  /* position: fixed;
+  left: 0rem;
+  bottom: 0rem;
+  height: 10rem;
+  width: 100%; */
+}
+
+/*--------------- Portfolio Page -----------------*/
+
+/* card style*/
+.col {
+  display: flex;
+  justify-content: center;
+}
+
