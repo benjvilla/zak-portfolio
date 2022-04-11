@@ -49,6 +49,14 @@ nav a:hover {
   z-index: 1001;
 }
 
+/*--------------- Portfoli Page -----------------*/
+/* card style*/
+
+.col {
+  display: flex;
+  justify-content: center;
+}
+
 /* Footer */
 .footer {
   display: flex;
