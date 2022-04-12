@@ -3,11 +3,14 @@ import React from "react";
 
 //Materials page content
 export default function Materials() {
-
   return (
-    <div>
+
+    /* content returned to Materials page */
+    <div className="materialsBody">
+
       {/* header for materials page */}
-      <h2>Materials Page! (placeholder)</h2>
+      <h2 className="materialsHeader">Materials Page! (placeholder)</h2>
+      
       <div>
         {/* image for Intro to LMS */}
         <img
@@ -31,6 +34,7 @@ export default function Materials() {
           your shiny new account.
         </p>
       </div>
+
       <div>
         <img
           class="avatar-square catalog-course-logo course-info_avatar--img animated fadeIn"
@@ -54,10 +58,11 @@ export default function Materials() {
           keep your output (and your spirits) high!
         </p>
       </div>
+
       <div>
-        <img 
-          class="" 
-          src="https://d3j0t7vrtr92dk.cloudfront.net/market/1588072009_Persevere%20During%20Setbacks.png?" 
+        <img
+          class=""
+          src="https://d3j0t7vrtr92dk.cloudfront.net/market/1588072009_Persevere%20During%20Setbacks.png?"
           alt="Persevere During Setbacks (VD092)"
           title="Persevere During Setbacks (VD092)"
         />
@@ -66,7 +71,9 @@ export default function Materials() {
           href="https://zakariahrittenhouse.talentlms.com/trainer/course/id:129"
           target="_blank"
         >
-          <button class="button">Go To Persevere During Setbacks (VD092)</button>
+          <button class="button">
+            Go To Persevere During Setbacks (VD092)
+          </button>
         </a>
         <p>
           "Persevering when bad things happen isn’t always easy. Sometimes the
