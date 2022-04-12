@@ -9,6 +9,10 @@ import {
 } from "react-bootstrap";
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import NEOWeek1 from "../images/New Hire Orientation - Week 1.jpg";
+import NEOWeek2 from "../images/New Hire Orientation - Week 2.jpg";
+import Expectations from "../images/New Hire Orientation - Expectations, Conduct and Appearance.jpg";
+import GoGuidelines from "../images/New Hire Orientation - Go Guidelines.jpg";
+import ZakBrand from "../images/ZakPersonalBrand.png"
 
 export default function Portfolio() {
 
@@ -24,17 +28,18 @@ export default function Portfolio() {
   
   />
   <Card.Body>
-    <Card.Title>Card Title 1</Card.Title>
+    <Card.Title>New Hire Orientation Overview</Card.Title>
     <Card.Text>
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
     </Card.Text>
     <Accordion defaultActiveKey="0">
-  <Accordion.Item eventKey="0">
+  <Accordion.Item eventKey="1">
     <Accordion.Header>Accordion Item #1</Accordion.Header>
     <Accordion.Body>
-    <Card.Img variant="top" src={NEOWeek1}
-  />
+    <Card.Img variant="top" src={NEOWeek2} alt="New Hire Orientation Week 2"/>
+    <Card.Img variant="top" src={Expectations} alt ="New Hire Orientation Expectations, Conduct and Appearance"/>
+    <Card.Img variant="top" src={GoGuidelines} alt="New Hire Orientation GO Guidelines"/>
     </Accordion.Body>
   </Accordion.Item>
   </Accordion>
@@ -43,21 +48,20 @@ export default function Portfolio() {
 
 {/* Card 2 */}
  <Card style={{ width: '50rem' }}>
-  <Card.Img variant="top" src={NEOWeek1}
+  <Card.Img variant="top" src={ZakBrand}
   
   />
   <Card.Body>
-    <Card.Title>Card Title 2</Card.Title>
+    <Card.Title>Personal Brand</Card.Title>
     <Card.Text>
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
     </Card.Text>
     <Accordion defaultActiveKey="0">
-  <Accordion.Item eventKey="0">
+  <Accordion.Item eventKey="1">
     <Accordion.Header>Accordion Item #2</Accordion.Header>
     <Accordion.Body>
-    <Card.Img variant="top" src={NEOWeek1}
-  />
+    <Card.Img variant="top" src={ZakBrand} alt="Zakariah Rittenhouse Personal Brand"/>
     </Accordion.Body>
   </Accordion.Item>
   </Accordion>
@@ -75,7 +79,7 @@ export default function Portfolio() {
       the card's content.
     </Card.Text>
     <Accordion defaultActiveKey="0">
-  <Accordion.Item eventKey="0">
+  <Accordion.Item eventKey="1">
     <Accordion.Header>Accordion Item #3</Accordion.Header>
     <Accordion.Body>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
