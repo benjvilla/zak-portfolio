@@ -18,7 +18,7 @@ import Spotify from "../images/spotify-logo.png";
 // App function
 export default function App() {
   return (
-    <>
+    <body className="body">
       <header>
         <a className="skip-link" href="#main-content">
           Skip to main content
@@ -49,7 +49,7 @@ export default function App() {
           <div className="logos">
             <a href="https://twitter.com/ZDRittenhouse" target="_blank">
               <img className="logos" src={Twitter} alt="Twitter Logo" />
-            {/* <a href="https://www.flaticon.com/free-icons/twitter" title="twitter icons">Twitter icons created by Pixel perfect - Flaticon</a> */}
+              {/* <a href="https://www.flaticon.com/free-icons/twitter" title="twitter icons">Twitter icons created by Pixel perfect - Flaticon</a> */}
             </a>
             <a
               href="https://www.behance.net/zakariahrittenhouse"
@@ -80,6 +80,6 @@ export default function App() {
           </footer>
         </section>
       </main>
-    </>
+    </body>
   );
 }

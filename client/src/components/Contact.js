@@ -31,7 +31,7 @@ export default function Contact() {
           noValidate
           validated={validated}
           onSubmit={handleSubmit}
-          action="Lniemcav@gmail.com"
+          action="https://formsubmit.co/doulaleahnc@gmail.com"
           method="POST"
         >
           {/* Name */}

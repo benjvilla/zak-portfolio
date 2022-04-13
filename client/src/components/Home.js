@@ -34,11 +34,10 @@ export default function Home() {
             decade.
           </p>
           <img
-            className="js-lazy e2e-site-project-module-image image-loaded"
+            className="thenImage"
             src="https://cdn.myportfolio.com/af2b14b5-5d34-48cb-8346-883337609fd8/13de2d52-d313-4baf-b6ba-f0113f60d6e7_rw_1200.jpg?h=106a34051a573155c12e81df16d4dd50"
-            width="40%"
             srcSet="https://cdn.myportfolio.com/af2b14b5-5d34-48cb-8346-883337609fd8/13de2d52-d313-4baf-b6ba-f0113f60d6e7_rw_600.jpg?h=be9c1536d3e2e6bac97988ea3ff3c567 600w,https://cdn.myportfolio.com/af2b14b5-5d34-48cb-8346-883337609fd8/13de2d52-d313-4baf-b6ba-f0113f60d6e7_rw_1200.jpg?h=106a34051a573155c12e81df16d4dd50 960w,"
-            sizes="(max-width: 960px) 100vw, 960px"
+            alt="Six individuals posing in a restaurant"
           />
         </section>
 
@@ -46,11 +45,10 @@ export default function Home() {
         <h3>...Then, it turned into so much more.</h3>
         <section className="homeNow">
           <img
-            className="js-lazy e2e-site-project-module-image image-loaded"
+            className="nowImage"
             src="https://cdn.myportfolio.com/af2b14b5-5d34-48cb-8346-883337609fd8/e8735317-e619-42f7-b986-c7ffe9660bbb_rw_3840.JPG?h=df7f7097fb265ec58f861745c4d9a7fb"
-            width="40%"
             srcSet="https://cdn.myportfolio.com/af2b14b5-5d34-48cb-8346-883337609fd8/e8735317-e619-42f7-b986-c7ffe9660bbb_rw_600.JPG?h=ca171dd96d78f28a030d9cbdf05395c0 600w,https://cdn.myportfolio.com/af2b14b5-5d34-48cb-8346-883337609fd8/e8735317-e619-42f7-b986-c7ffe9660bbb_rw_1200.JPG?h=d734d990f9b33cf412d1dac7dde4aada 1200w,https://cdn.myportfolio.com/af2b14b5-5d34-48cb-8346-883337609fd8/e8735317-e619-42f7-b986-c7ffe9660bbb_rw_1920.JPG?h=0b1f864aec6ae81779e3c068cf78884b 1920w,https://cdn.myportfolio.com/af2b14b5-5d34-48cb-8346-883337609fd8/e8735317-e619-42f7-b986-c7ffe9660bbb_rw_3840.JPG?h=df7f7097fb265ec58f861745c4d9a7fb 3840w,"
-            sizes="(max-width: 3840px) 100vw, 3840px"
+          alt="Zakariah Rittenhouse sitting in a chair"
           />
           <p className="nowText">
             When I work with new hires, veteran staff, managers, directors or
@@ -65,7 +63,7 @@ export default function Home() {
         <section className="testimonials">
           {/* Testimonials Section */}
           <h3 className="Testimonialsh3">Testimonials</h3>
-          <p className="testimonialsText">I am proud of the work I do. I am even more proud of the impact it has. Click here to see what others have said about me and my work.</p>
+          <p className="testimonialsText">I am proud of the work I do. I am even more proud of the impact it has. Click below to see what others have said about me and my work.</p>
           <BootstrapCarousel/>
         </section>
       </div>

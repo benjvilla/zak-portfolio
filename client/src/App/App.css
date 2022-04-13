@@ -6,7 +6,7 @@
   justify-content: space-around;
   align-items: center;
   background-color: #102F42;
-  padding: 1rem;
+  padding-top: .5rem;
   color: white;
 }
 
@@ -24,7 +24,7 @@ nav a:hover {
 
 /* Name on top left */
 .Zak {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 /* Skip link style on all pages */
@@ -54,7 +54,7 @@ nav a:hover {
 
 /* Body of every page */
 .main {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
   position: relative;
   min-height: 100vh;
 }
@@ -101,6 +101,18 @@ nav a:hover {
   background-color: #5F7B81;
 }
 
+/* @media (max-width: 1200px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+} */
+
 /*---------------- Home.js ------------------*/
 
 /* Hero image directly under nav */
@@ -111,7 +123,7 @@ nav a:hover {
   align-items: center;
   background-color: #5F7B81;
   color: white;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 /* "Learning Experience Designer" */
@@ -147,6 +159,7 @@ nav a:hover {
   margin-top: 1.5rem;
   margin-bottom: 2rem;
   border-style: ridge;
+  background-color: #D9DBDD;
 }
 
 /* Container with text and second photo */
@@ -154,6 +167,7 @@ nav a:hover {
   display: flex;
   margin-top: 1.5rem;
   border-style: ridge;
+  background-color: #D9DBDD;
 }
 
 /* Just the first paragraph of text */
@@ -163,11 +177,24 @@ nav a:hover {
   margin: 2rem;
 }
 
+/* Image in first section */
+.thenImage {
+  display: flex;
+  width: 50%;
+}
+
 /* Just the second paragraph of text */
 .nowText {
   display: flex;
   align-items: center;
   margin: 2rem;
+  
+}
+
+/* Image in second section */
+.nowImage {
+  display: flex;
+  width: 30%;
 }
 
 /* Text for below Testimonials */
@@ -192,14 +219,20 @@ nav a:hover {
   margin: 1rem;
 }
 
-/*--------------- Portfolio Page -----------------*/
-
-/* Container for cards */
-.container{
-  display: flex;
-  justify-content: center;
+.carouselText {
+  font-size: large;
 }
 
+/*--------------- Portfolio Page -----------------*/
+
+
+.PortfolioHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+}
 /* All cards on page */
 .card{
   margin: 2rem;
@@ -208,7 +241,9 @@ nav a:hover {
 /* Card style*/
 .col {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 /* Portfolio body */
