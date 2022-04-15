@@ -6,7 +6,6 @@
   justify-content: space-around;
   align-items: center;
   background-color: #102F42;
-  padding-top: .5rem;
   color: white;
 }
 
@@ -22,9 +21,9 @@ nav a:hover {
   color: white;
 }
 
-/* Name on top left */
-.Zak {
-  font-size: xx-large;
+/* Brand Logo on top left of Nav */
+#navBrand {
+  width: 5rem;
 }
 
 /* Skip link style on all pages */
@@ -140,7 +139,7 @@ nav a:hover {
   align-items: center;
   background-color: #5F7B81;
   color: white;
-  font-size: large;
+  font-size: 1.618vw;
 }
 
 /* Home page body */
@@ -174,33 +173,41 @@ nav a:hover {
 .thenText {
   display: flex;
   align-items: center;
-  margin: 2rem;
+  margin: 1rem;
+  font-size: 1.618vw;
 }
 
 /* Image in first section */
 .thenImage {
   display: flex;
-  width: 50%;
+  align-self: center;
+  width: 40vw;
+  max-height: 400px;
+  padding-right: 1rem;
 }
 
 /* Just the second paragraph of text */
 .nowText {
   display: flex;
   align-items: center;
-  margin: 2rem;
-  
+  margin: 1rem;
+  font-size: 1.618vw;
 }
 
 /* Image in second section */
 .nowImage {
   display: flex;
-  width: 30%;
+  align-self: center;
+  width: 30vw;
+  max-height: 500px;
+  padding-left: 1rem;
 }
 
 /* Text for below Testimonials */
 .testimonialsText {
   display: flex;
   align-items: center;
+  text-align: center;
   font-size: large;
   margin-top: 1rem;
 }
@@ -221,6 +228,13 @@ nav a:hover {
 
 .carouselText {
   font-size: large;
+}
+
+.mainCarousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
 }
 
 /*--------------- Portfolio Page -----------------*/
