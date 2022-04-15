@@ -20,17 +20,17 @@ export default function PortfolioCards() {
       ],
       header: "Accordian Header",
     },
-  {
-      coverImage: [{ image: "", alt: "" }],
-      title: "",
-      text: "t",
-      innerImage: [
-        { image: "", alt: "" },
-        { image: "", alt: "" },
-      ],
-      header: "Accordian Header",
+  // {
+  //     coverImage: [{ image: "", alt: "" }],
+  //     title: "",
+  //     text: "t",
+  //     innerImage: [
+  //       { image: "", alt: "" },
+  //       { image: "", alt: "" },
+  //     ],
+  //     header: "Accordian Header",
     
-    },
+  //   },
   ];
 
   // function to render cards

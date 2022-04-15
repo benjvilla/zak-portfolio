@@ -7,6 +7,7 @@ const app = express();
 const ServerSchema = require('./ServerSchema');
 mongoose.connect("mongodb://localhost:27017/zakPortfolio")
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 //init the database through the connection constructor, stored in a variable
 const db = mongoose.connection
@@ -33,8 +34,8 @@ app.listen(port,()=>{
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user:"portfoliotest001@gmail.com",
-    pass: "Welcome123!",
+    user:process.env.USER,
+    pass: process.env.PASS,
   },
 
 });
@@ -55,7 +56,7 @@ const subject = req.body.subject;
 const message = req.body.message;
 
 const mail = {
-  from: `Contact Form: ${name}`,
+  from: `Contact Form: ${email}`,
   to: "portfoliotest001@gmail.com",
   subject: subject,
   html: `<p>Name: ${name}</p>
