@@ -1,31 +1,32 @@
 /*--------------- App.js -----------------*/
 
-/*Navigation Style on all pages*/
+/*Navigation style on all pages*/
 .nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #214172;
-  padding: 4rem;
-  margin: -0.5rem;
+  background-color: #102F42;
   color: white;
 }
 
+/* Nav bar text */
 .nav a {
   text-decoration-line: none;
   color: white;
   font-size: larger;
 }
 
+/* When hover over nav link */
 nav a:hover {
-  color: #99b7e3;
+  color: white;
 }
 
-.Zak {
-    font-size: xx-large;
+/* Brand Logo on top left of Nav */
+#navBrand {
+  width: 5rem;
 }
 
-/*Skip Link Style on all pages*/
+/* Skip link style on all pages */
 .skip-link {
   position: absolute;
   width: .25rem;
@@ -37,6 +38,7 @@ nav a:hover {
   border: 0;
 }
 
+/* When skip link shows up */
 .skip-link:focus {
   background: white;
   clip: auto;
@@ -49,24 +51,258 @@ nav a:hover {
   z-index: 1001;
 }
 
-/*--------------- Portfoli Page -----------------*/
-/* card style*/
+/* Body of every page */
+.main {
+  /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
+  position: relative;
+  min-height: 100vh;
+}
 
-.col {
-  display: flex;
-  justify-content: center;
+/* Body of every page - wrapped */
+#content-wrap {
+  /* Footer height */
+  padding-bottom: 10rem;
 }
 
 /* Footer */
 .footer {
   display: flex;
   justify-content: center;
-  bottom: 0;
 }
 
+/* Footer text */
 .footer > a {
   margin: 1rem;
   text-decoration: none;
   color: black;
   font-size: medium;
+  font-weight: 700;
+}
+
+/* Logos at the Footer */
+.logos {
+  display: flex;
+  justify-content: center;
+  height: 3vh;
+  margin: 1rem;
+}
+
+/* Social media logos */
+.footerWithSocials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: 15vh;
+  width: 100%;
+  background-color: #5F7B81;
+}
+
+/* @media (max-width: 1200px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+} */
+
+/*---------------- Home.js ------------------*/
+
+/* Hero image directly under nav */
+.heroOverlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #5F7B81;
+  color: white;
+  padding: 2rem;
+}
+
+/* "Learning Experience Designer" */
+.designer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tags in hero image */
+.heroTags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5F7B81;
+  color: white;
+  font-size: 1.618vw;
+}
+
+/* Home page body */
+.homeBody {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+/* Container with text and first photo */
+.homeThen {
+  display: flex;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border-style: ridge;
+  background-color: #D9DBDD;
+}
+
+/* Container with text and second photo */
+.homeNow {
+  display: flex;
+  margin-top: 1.5rem;
+  border-style: ridge;
+  background-color: #D9DBDD;
+}
+
+/* Just the first paragraph of text */
+.thenText {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  font-size: 1.618vw;
+}
+
+/* Image in first section */
+.thenImage {
+  display: flex;
+  align-self: center;
+  width: 40vw;
+  max-height: 400px;
+  padding-right: 1rem;
+}
+
+/* Just the second paragraph of text */
+.nowText {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  font-size: 1.618vw;
+}
+
+/* Image in second section */
+.nowImage {
+  display: flex;
+  align-self: center;
+  width: 30vw;
+  max-height: 500px;
+  padding-left: 1rem;
+}
+
+/* Text for below Testimonials */
+.testimonialsText {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: large;
+  margin-top: 1rem;
+}
+
+/*  */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Carousel at the bottom of Testimonials*/
+.carousel {
+  margin: 1rem;
+}
+
+.carouselText {
+  font-size: large;
+}
+
+.mainCarousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+}
+
+/*--------------- Portfolio Page -----------------*/
+
+
+.PortfolioHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+}
+/* All cards on page */
+.card{
+  margin: 2rem;
+}
+
+/* Card style*/
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Portfolio body */
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+/*--------------- Materials Page -----------------*/
+
+/* Materials page body */
+.materialsBody {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+/* Header on materials page */
+.materialsHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+/* Buttons on materials page */
+.button {
+  margin: 1rem;
+}
+
+/*---------------- Contact Page ------------------*/
+
+/* Contact page body */
+.contactBody {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+/* Text at the top of contact page */
+.text-center {
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
