@@ -1,23 +1,12 @@
-//importing express
 const express = require("express");
-
-//importing mongoose
 const mongoose = require("mongoose")
-
-//importing cors
 const cors = require("cors")
-
-//setting up the default port
+const router = express.Router();
 const port = process.env.PORT || 5000;
-
-//binding express to a variable
 const app = express();
-
-//importing server schema
 const ServerSchema = require('./ServerSchema');
-
-//creating the initial connection to the database
 mongoose.connect("mongodb://localhost:27017/zakPortfolio")
+const nodemailer = require("nodemailer");
 
 //init the database through the connection constructor, stored in a variable
 const db = mongoose.connection
@@ -32,20 +21,59 @@ const Entry = mongoose.model("entries", ServerSchema)
 app.use(express.static("./build"))
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
+app.use(express.json());
+app.use("/", router);
+
 
 app.listen(port,()=>{
     console.log(`Listening on port: ${port}`)
 })
 
+//Setting up nodemailer with gmail
+const contactEmail = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user:"portfoliotest001@gmail.com",
+    pass: "Welcome123!",
+  },
 
-//creating API route for the front end to access ALL the entries from the database
-app.get("/allentries", async (req, res) => {
-    //assigning the result of a find on our Model to a variable
-    let allEntries = await Entry.find({})
-    //sending the result as a json to the page
-    res.json(allEntries)
-  });
+});
+
+contactEmail.verify((error) => {
+  if (error){
+    console.log(error);
+  } else {
+    console.log("Ready to send")
+  }
+});
+
+// setting up the router to send an email
+router.post("/contact", (req,res) => {
+const name = req.body.name;
+const email = req.body.email;
+const subject = req.body.subject;
+const message = req.body.message;
+
+const mail = {
+  from: `Contact Form: ${name}`,
+  to: "portfoliotest001@gmail.com",
+  subject: subject,
+  html: `<p>Name: ${name}</p>
+  <p>Email: ${email}</p>
+  <p>Message: ${message}</p>`
+};
+
+contactEmail.sendMail(mail, (error) => {
+  if (error) {
+    res.json({status: "ERROR"});
+  } else {
+    res.json({status: "Message Sent"})
+  }
+});
+
+});
+
+
   
-
 // redirecting to the home page 
-// res.redirect("http://localhost:3000")
+//  res.redirect("http://localhost:3000/contact")
