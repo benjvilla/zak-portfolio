@@ -14,6 +14,7 @@ import Behance from "../images/behance-logo.png";
 import LinkedIn from "../images/linkedin-logo.png";
 import Medium from "../images/medium-logo.png";
 import Spotify from "../images/spotify-logo.png";
+import Brand from "../images/ZakPersonalBrand.png";
 
 // App function
 export default function App() {
@@ -24,11 +25,7 @@ export default function App() {
           Skip to main content
         </a>
         <nav className="nav">
-          <h1 className="Zak">
-            Zak
-            <br />
-            Rittenhouse
-          </h1>
+          <img id="navBrand" src={Brand} alt="ZR Brand Logo" />
           <Nav />
         </nav>
       </header>

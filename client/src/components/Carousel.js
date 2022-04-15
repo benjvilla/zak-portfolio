@@ -12,7 +12,7 @@ export default function BootstrapCarousel() {
   //         };
 
   return (
-    <>
+    <main className="mainCarousel">
       <Carousel variant="dark" interval={null}>
         <Carousel.Item>
           <img src={julia} alt="" /> 
@@ -87,6 +87,6 @@ export default function BootstrapCarousel() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </>
+    </main>
   );
 }
