@@ -8,7 +8,9 @@ export default function ContactForm() {
   // Checking required fields for input
   const [validated, setValidated] = useState(false);
   // Checking for submission of form
-  const [status, setStatus] = useState("Submit");
+  const [status, setStatus] = useState("Send");
+  // Changing the message at the bottom to this after submit
+  const [message, setMessage] = useState("");
 
   // Function to handle the submit of the form
   const handleSubmit = async (event) => {
@@ -18,11 +20,11 @@ export default function ContactForm() {
     // If required fields don't have input
     if (form.checkValidity() === false) {
       event.preventDefault();
-      // Stop and alert user
+      // Don't submit
       event.stopPropagation();
     }
 
-    // If all input fields have input, run function as true
+    // Run the argument "true" in place of the parameter "validated"
     setValidated(true);
 
     // Object with form details
@@ -46,16 +48,13 @@ export default function ContactForm() {
     setStatus("Submit");
     let result = await response.json();
     alert(result.status);
+
+    // The message string starts out empty
+    setMessage("Thank you for your message!");
   };
 
   return (
-    <Form
-      noValidate
-      validated={validated}
-      onSubmit={handleSubmit}
-      // action="https://formsubmit.co/doulaleahnc@gmail.com"
-      // method="POST"
-    >
+    <Form noValidate validated={validated} onSubmit={handleSubmit}>
       {/* Name */}
       <Form.Group className="mt-3" controlId="formBasicName">
         <Form.Label For="name">Name *</Form.Label>
@@ -122,6 +121,10 @@ export default function ContactForm() {
 
         {/* Send */}
       </Button>
+      <br />
+      <Form.Group className="mt-3">
+        <Form.Label For="subject">{message}</Form.Label>
+      </Form.Group>
     </Form>
   );
 }
