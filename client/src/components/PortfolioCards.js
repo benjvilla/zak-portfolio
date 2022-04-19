@@ -81,9 +81,7 @@ export default function PortfolioCards() {
   return (
     <>
       <Container fluid="md">
-        <div className="container">
-          <div className="row">
-            <div className="col">
+           <div className="col"> 
               {/* Card 1 */}
               <Card style={{ width: "40rem" }}>
                 <Card.Img
@@ -288,8 +286,6 @@ export default function PortfolioCards() {
                 </Card.Body>
               </Card>
               {/* Card 6 End */}
-            </div>
-          </div>
         </div>
       </Container>
     </>
