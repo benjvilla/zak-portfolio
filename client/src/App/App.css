@@ -418,6 +418,24 @@ footer a:hover {
   margin-right: 10rem;
 }
 
+/* The text of the modal */
+.modalBody {
+  margin: 5rem;
+  text-align: center;
+  font-size: large;
+}
+
+/* The "return home" button */
+.modalLink {
+  text-decoration: none;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+  text-align: center;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
 @media (max-width: 1000px) {
   .text-center {
     margin-left: 5rem;
