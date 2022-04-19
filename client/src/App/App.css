@@ -18,6 +18,7 @@
 
 /* When hover over nav link */
 nav a:hover {
+  text-decoration: 3px underline;
   color: white;
 }
 
@@ -79,6 +80,11 @@ nav a:hover {
   font-weight: 700;
 }
 
+/* When hover over nav links in footer */
+footer a:hover {
+  color: white;
+}
+
 /* Logos at the Footer */
 .logos {
   display: flex;
@@ -96,21 +102,56 @@ nav a:hover {
   position: absolute;
   bottom: 0;
   height: 15vh;
-  width: 100%;
+  width: 100vw;
   background-color: #5F7B81;
 }
 
-/* @media (max-width: 1200px) {
+@media (max-width: 1200px) {
   .body {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    width: 100vw;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
   }
   .nav {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100vw;
   }
-} */
+  .footer {
+    display: flex;
+    align-items: center;
+    word-wrap: normal;
+  }
+  .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+  }
+  .footerWithSocials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 510px) {
+  .nav {
+    width: 100%;
+  }
+  .footerWithSocials {
+    width: 100%;
+    height: auto;
+  }
+}
 
 /*---------------- Home.js ------------------*/
 
@@ -139,7 +180,6 @@ nav a:hover {
   align-items: center;
   background-color: #5F7B81;
   color: white;
-  font-size: 1.618vw;
 }
 
 /* Home page body */
@@ -173,8 +213,8 @@ nav a:hover {
 .thenText {
   display: flex;
   align-items: center;
-  margin: 1rem;
-  font-size: 1.618vw;
+  margin: 2rem;
+  font-size: large;
 }
 
 /* Image in first section */
@@ -183,15 +223,14 @@ nav a:hover {
   align-self: center;
   width: 40vw;
   max-height: 400px;
-  padding-right: 1rem;
 }
 
 /* Just the second paragraph of text */
 .nowText {
   display: flex;
   align-items: center;
-  margin: 1rem;
-  font-size: 1.618vw;
+  margin: 2rem;
+  font-size: large;
 }
 
 /* Image in second section */
@@ -200,7 +239,6 @@ nav a:hover {
   align-self: center;
   width: 30vw;
   max-height: 500px;
-  padding-left: 1rem;
 }
 
 /* Text for below Testimonials */
@@ -227,6 +265,9 @@ nav a:hover {
 }
 
 .carouselText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: large;
 }
 
@@ -237,9 +278,49 @@ nav a:hover {
   width: 40vw;
 }
 
+/* Screens under 800px */
+@media (max-width: 800px) {
+  .homeThen {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .thenImage {
+    margin-top: 2rem;
+  }
+  .homeNow {
+    display: flex;
+    flex-direction: column;
+  }
+  .nowImage {
+    margin-top: 2rem;
+  }
+  .carousel {
+    width: 100vw;
+  }
+  .carouselText {
+    font-size: 80%;
+  }
+  p {
+    font-size: small;
+  }
+}
+
+/* Screens under 500px */
+@media (max-width: 500px) {
+  .heroOverlay {
+    text-align: center;
+  }
+  .carousel {
+    width: 100vw;
+  }
+  .carouselText {
+    font-size: 65%;
+  }
+}
+
 /*--------------- Portfolio Page -----------------*/
 
-
+/* Top of page header */
 .PortfolioHeader{
   display: flex;
   justify-content: center;
@@ -247,12 +328,13 @@ nav a:hover {
   padding-bottom: 1rem;
   margin-top: 2rem;
 }
+
 /* All cards on page */
 .card{
-  margin: 2rem;
+  margin: 1rem;
 }
 
-/* Card style*/
+/* Card style */
 .col {
   display: flex;
   flex-direction: column;
@@ -268,12 +350,30 @@ nav a:hover {
   margin-top: 2rem;
 }
 
+.individualCard {
+  width: 50rem;
+}
+
+/* Screens under 800px */
+@media (max-width: 800px) {
+  .individualCard {
+  width: 20rem;
+}
+.PortfolioHeader {
+  text-align: center;
+  font-size: x-large;
+  margin: 2rem;
+}
+}
+
 /*--------------- Materials Page -----------------*/
 
 /* Materials page body */
 .materialsBody {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
   margin-top: 2rem;
 }
@@ -291,6 +391,17 @@ nav a:hover {
   margin: 1rem;
 }
 
+.avatar-square {
+  width: 30rem;
+}
+
+/* Screens under 525px */
+@media (max-width: 525px) {
+  .avatar-square {
+    width: 70vw;
+  }
+}
+
 /*---------------- Contact Page ------------------*/
 
 /* Contact page body */
@@ -305,4 +416,36 @@ nav a:hover {
 .text-center {
   margin-left: 10rem;
   margin-right: 10rem;
+}
+
+/* The text of the modal */
+.modalBody {
+  margin: 5rem;
+  text-align: center;
+  font-size: large;
+}
+
+/* The "return home" button */
+.modalLink {
+  text-decoration: none;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+  text-align: center;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+@media (max-width: 1000px) {
+  .text-center {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .text-center {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
