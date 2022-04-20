@@ -22,7 +22,7 @@ export default function BootstrapCarousel() {
               opportunities created and organized by Zak since 2016. Zak has the
               ability to approach learning topics in a way that is accessible
               across fields and allows for the diversity and inclusion of the
-              participants, not only as individuals with diverse professional
+              participants, not only as individuals with diverse professional 
               backgrounds but also in regards to race, gender, sexuality,
               disability, economic background and education of the participants.
               Zak educates in a way that allows for long term development. I

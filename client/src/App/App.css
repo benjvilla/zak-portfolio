@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #102F42;
+  background-color: #102f42;
   color: white;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -38,10 +38,10 @@ nav a:hover {
 /* Skip link style on all pages */
 .skip-link {
   position: absolute;
-  width: .25rem;
-  height: .25rem;
+  width: 0.25rem;
+  height: 0.25rem;
   padding: 0;
-  margin: -.25rem;
+  margin: -0.25rem;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
@@ -63,7 +63,7 @@ nav a:hover {
 /* Body of every page */
 .main {
   position: relative;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 /* Body of every page - wrapped */
@@ -103,7 +103,8 @@ footer a:hover {
 
 /* Logos - hover color white */
 .logos a:hover {
-  filter: invert(100%) sepia(1%) saturate(389%) hue-rotate(159deg) brightness(119%) contrast(100%);
+  filter: invert(100%) sepia(1%) saturate(389%) hue-rotate(159deg)
+    brightness(119%) contrast(100%);
 }
 
 /* Social media logos */
@@ -116,7 +117,7 @@ footer a:hover {
   bottom: 0;
   height: 13vh;
   width: 100vw;
-  background-color: #5F7B81;
+  background-color: #5f7b81;
 }
 
 /* Screens under 1200px */
@@ -131,6 +132,7 @@ footer a:hover {
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    min-height: 84vh;
   }
   .nav {
     display: flex;
@@ -145,17 +147,29 @@ footer a:hover {
     width: 100vw;
   }
   .logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
+    height: 1.5rem;
   }
   .footerWithSocials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
     height: auto;
+  }
+  #content-wrap {
+    padding-bottom: 7rem;
+  }
+}
+
+/* Screens under 300px */
+@media (max-width: 350px) {
+  .logos {
+    height: 1.5rem;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+  }
+  #content-wrap {
+    padding-bottom: 12rem;
   }
 }
 
@@ -167,7 +181,7 @@ footer a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #5F7B81;
+  background-color: #5f7b81;
   color: white;
   padding: 2rem;
   width: 100vw;
@@ -193,7 +207,7 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5F7B81;
+  background-color: #5f7b81;
   color: white;
 }
 
@@ -205,7 +219,7 @@ footer a:hover {
   align-items: center;
   margin-top: 2rem;
   margin-left: 5rem;
-  margin-right: 5rem
+  margin-right: 5rem;
 }
 
 /* Container with text and first photo */
@@ -318,20 +332,20 @@ footer a:hover {
 @media (max-width: 1500px) {
   .homeBody {
     margin-left: 2rem;
-    margin-right: 2rem
+    margin-right: 2rem;
   }
- }
+}
 
- /* Screen under 1200px */
- @media (max-width: 1200px) {
-   .homeThen {
+/* Screen under 1200px */
+@media (max-width: 1200px) {
+  .homeThen {
     display: flex;
     flex-direction: column-reverse;
   }
   .textWithTitle {
     margin: 3rem;
   }
- }
+}
 
 /* Screens under 800px */
 @media (max-width: 850px) {
@@ -363,7 +377,7 @@ footer a:hover {
   }
   .homeBody {
     margin-left: 1rem;
-    margin-right: 1rem
+    margin-right: 1rem;
   }
   .carousel {
     width: 100vw;
@@ -375,8 +389,18 @@ footer a:hover {
 
 /*--------------- Portfolio Page -----------------*/
 
+/* Portfolio body */
+.portfolioContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
 /* Top of page header */
-.PortfolioHeader{
+.PortfolioHeader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -384,41 +408,38 @@ footer a:hover {
   margin-top: 2rem;
 }
 
-/* All cards on page */
-.card{
-  margin: 1rem;
-}
-
 /* Card style */
 .col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
 }
 
-/* Portfolio body */
-.container {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-  margin-top: 2rem;
-}
-
+/* Each individual card */
 .individualCard {
   width: 50rem;
+}
+
+/* Screens under 1700px */
+@media (max-width: 1700px) {
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Screens under 800px */
 @media (max-width: 800px) {
   .individualCard {
-  width: 20rem;
-}
-.PortfolioHeader {
-  text-align: center;
-  font-size: x-large;
-  margin: 2rem;
-}
+    width: 20rem;
+  }
+  .PortfolioHeader {
+    text-align: center;
+    font-size: x-large;
+    margin: 2rem;
+  }
 }
 
 /*--------------- Materials Page -----------------*/
@@ -464,8 +485,15 @@ footer a:hover {
 .contactBody {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
+}
+
+/* Form page container */
+.formContainer {
+  margin-top: 5rem;
 }
 
 /* Text at the top of contact page */
