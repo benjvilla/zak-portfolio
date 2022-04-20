@@ -1,12 +1,20 @@
+/* Applies to everything */
+* {
+  box-sizing: border-box;
+  font-family: roboto, sans-serif;
+}
+
 /*--------------- App.js -----------------*/
 
-/*Navigation style on all pages*/
+/* Navigation style on all pages */
 .nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #102F42;
   color: white;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 /* Nav bar text */
@@ -18,6 +26,7 @@
 
 /* When hover over nav link */
 nav a:hover {
+  text-decoration: 3px underline;
   color: white;
 }
 
@@ -53,7 +62,6 @@ nav a:hover {
 
 /* Body of every page */
 .main {
-  /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
   position: relative;
   min-height: 100vh;
 }
@@ -62,6 +70,7 @@ nav a:hover {
 #content-wrap {
   /* Footer height */
   padding-bottom: 10rem;
+  width: 100vw;
 }
 
 /* Footer */
@@ -79,12 +88,22 @@ nav a:hover {
   font-weight: 700;
 }
 
+/* When hover over nav links in footer */
+footer a:hover {
+  color: white;
+}
+
 /* Logos at the Footer */
 .logos {
   display: flex;
   justify-content: center;
-  height: 3vh;
+  height: 2.5vh;
   margin: 1rem;
+}
+
+/* Logos - hover color white */
+.logos a:hover {
+  filter: invert(100%) sepia(1%) saturate(389%) hue-rotate(159deg) brightness(119%) contrast(100%);
 }
 
 /* Social media logos */
@@ -95,22 +114,50 @@ nav a:hover {
   align-items: center;
   position: absolute;
   bottom: 0;
-  height: 15vh;
-  width: 100%;
+  height: 13vh;
+  width: 100vw;
   background-color: #5F7B81;
 }
 
-/* @media (max-width: 1200px) {
+/* Screens under 1200px */
+@media (max-width: 1300px) {
   .body {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    width: 100vw;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
   }
   .nav {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100vw;
   }
-} */
+  .footer {
+    display: flex;
+    align-items: center;
+    word-wrap: normal;
+    width: 100vw;
+  }
+  .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+  }
+  .footerWithSocials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+  }
+}
 
 /*---------------- Home.js ------------------*/
 
@@ -123,6 +170,14 @@ nav a:hover {
   background-color: #5F7B81;
   color: white;
   padding: 2rem;
+  width: 100vw;
+}
+
+/* "Hi, I'm Zak" */
+.zakHeader {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  /* -webkit-text-stroke: 2px black; */
 }
 
 /* "Learning Experience Designer" */
@@ -130,6 +185,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 /* Tags in hero image */
@@ -139,7 +195,6 @@ nav a:hover {
   align-items: center;
   background-color: #5F7B81;
   color: white;
-  font-size: 1.618vw;
 }
 
 /* Home page body */
@@ -148,33 +203,39 @@ nav a:hover {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  margin: 1rem;
   margin-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem
 }
 
 /* Container with text and first photo */
 .homeThen {
   display: flex;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
-  border-style: ridge;
-  background-color: #D9DBDD;
 }
 
 /* Container with text and second photo */
 .homeNow {
   display: flex;
-  margin-top: 1.5rem;
-  border-style: ridge;
-  background-color: #D9DBDD;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background-color: #e7eaed;
+}
+
+/* Title and text together */
+.textWithTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem;
 }
 
 /* Just the first paragraph of text */
 .thenText {
-  display: flex;
-  align-items: center;
-  margin: 1rem;
-  font-size: 1.618vw;
+  margin-top: 2rem;
+  font-size: larger;
 }
 
 /* Image in first section */
@@ -183,15 +244,12 @@ nav a:hover {
   align-self: center;
   width: 40vw;
   max-height: 400px;
-  padding-right: 1rem;
 }
 
 /* Just the second paragraph of text */
 .nowText {
-  display: flex;
-  align-items: center;
-  margin: 1rem;
-  font-size: 1.618vw;
+  margin-top: 2rem;
+  font-size: larger;
 }
 
 /* Image in second section */
@@ -200,19 +258,9 @@ nav a:hover {
   align-self: center;
   width: 30vw;
   max-height: 500px;
-  padding-left: 1rem;
 }
 
-/* Text for below Testimonials */
-.testimonialsText {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-size: large;
-  margin-top: 1rem;
-}
-
-/*  */
+/* Testimonials header */
 .testimonials {
   display: flex;
   flex-direction: column;
@@ -221,25 +269,113 @@ nav a:hover {
   margin-top: 2rem;
 }
 
+/* Text for below testimonials */
+.testimonialsText {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: larger;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
+
 /* Carousel at the bottom of Testimonials*/
-.carousel {
-  margin: 1rem;
-}
-
-.carouselText {
-  font-size: large;
-}
-
+/* The whole carousel */
 .mainCarousel {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40vw;
+  margin-bottom: 2rem;
+}
+/* The carousel container */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+/* Where text is housed in carousel */
+.carousel-item .carousel-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 8rem;
+}
+/* Carousel image */
+.carousel-item img {
+  margin-bottom: 8rem !important;
+}
+/* The actual text */
+.carouselText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+
+/* Screen under 1500px */
+@media (max-width: 1500px) {
+  .homeBody {
+    margin-left: 2rem;
+    margin-right: 2rem
+  }
+ }
+
+ /* Screen under 1200px */
+ @media (max-width: 1200px) {
+   .homeThen {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .textWithTitle {
+    margin: 3rem;
+  }
+ }
+
+/* Screens under 800px */
+@media (max-width: 850px) {
+  .thenImage {
+    margin-top: 2rem;
+  }
+  .homeNow {
+    display: flex;
+    flex-direction: column;
+  }
+  .nowImage {
+    margin-top: 2rem;
+  }
+  .carousel {
+    width: 100vw;
+  }
+  .carouselText {
+    font-size: 80%;
+  }
+  p {
+    font-size: small;
+  }
+}
+
+/* Screens under 500px */
+@media (max-width: 500px) {
+  .heroOverlay {
+    text-align: center;
+  }
+  .homeBody {
+    margin-left: 1rem;
+    margin-right: 1rem
+  }
+  .carousel {
+    width: 100vw;
+  }
+  .carouselText {
+    font-size: 70%;
+  }
 }
 
 /*--------------- Portfolio Page -----------------*/
 
-
+/* Top of page header */
 .PortfolioHeader{
   display: flex;
   justify-content: center;
@@ -247,12 +383,13 @@ nav a:hover {
   padding-bottom: 1rem;
   margin-top: 2rem;
 }
+
 /* All cards on page */
 .card{
-  margin: 2rem;
+  margin: 1rem;
 }
 
-/* Card style*/
+/* Card style */
 .col {
   display: flex;
   flex-direction: column;
@@ -268,12 +405,30 @@ nav a:hover {
   margin-top: 2rem;
 }
 
+.individualCard {
+  width: 50rem;
+}
+
+/* Screens under 800px */
+@media (max-width: 800px) {
+  .individualCard {
+  width: 20rem;
+}
+.PortfolioHeader {
+  text-align: center;
+  font-size: x-large;
+  margin: 2rem;
+}
+}
+
 /*--------------- Materials Page -----------------*/
 
 /* Materials page body */
 .materialsBody {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
   margin-top: 2rem;
 }
@@ -286,9 +441,21 @@ nav a:hover {
   padding-bottom: 1rem;
 }
 
+/* The images on materials page */
+.avatar-square {
+  width: 30rem;
+}
+
 /* Buttons on materials page */
 .button {
   margin: 1rem;
+}
+
+/* Screens under 525px */
+@media (max-width: 525px) {
+  .avatar-square {
+    width: 70vw;
+  }
 }
 
 /*---------------- Contact Page ------------------*/
@@ -305,4 +472,36 @@ nav a:hover {
 .text-center {
   margin-left: 10rem;
   margin-right: 10rem;
+}
+
+/* The text of the modal */
+.modalBody {
+  margin: 5rem;
+  text-align: center;
+  font-size: large;
+}
+
+/* The "return home" button */
+.modalLink {
+  text-decoration: none;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+  text-align: center;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+@media (max-width: 1000px) {
+  .text-center {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .text-center {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
