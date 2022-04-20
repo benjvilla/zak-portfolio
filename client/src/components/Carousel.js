@@ -15,7 +15,7 @@ export default function BootstrapCarousel() {
     <main className="mainCarousel">
       <Carousel variant="dark" interval={null}>
         <Carousel.Item>
-          <img src={julia} alt="" /> 
+          <img className="d-block w-200 mb-5" src={julia} alt="" /> 
           <Carousel.Caption>
             <h5 className="carouselText">
               "I have had the pleasure of attending training and development
@@ -34,7 +34,7 @@ export default function BootstrapCarousel() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img  src={julia} alt="" />
+          <img className="d-block w-200 mb-5" src={julia} alt="" />
           <Carousel.Caption>
             <h5 className="carouselText">
               "Zak is a great asset to any project or organization. He works
@@ -49,7 +49,7 @@ export default function BootstrapCarousel() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img  src={julia} alt="" />
+          <img className="d-block w-200 mb-5" src={julia} alt="" />
           <Carousel.Caption>
             <h5 className="carouselText">
               "Zak worked for me as a Trainer and during that time, I quickly
@@ -65,7 +65,7 @@ export default function BootstrapCarousel() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img src={julia} alt="" />
+          <img className="d-block w-200 mb-5" src={julia} alt="" />
           <Carousel.Caption>
             <h5 className="carouselText">
               "I met Zak when he was a volunteer activist with Soulforce, one of
