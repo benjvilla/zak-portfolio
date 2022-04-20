@@ -68,7 +68,7 @@ contactEmail.verify((error) => {
 });
 
 // setting up the router to send an email
-router.post("/contact", (req,res) => {
+router.post("/contact", async(req,res) => {
 const name = req.body.name;
 const email = req.body.email;
 const subject = req.body.subject;
@@ -91,21 +91,16 @@ contactEmail.sendMail(mail, (error) => {
   }
 });
 
-});
-
-  //CREATE functionality for inserting a new entry into our collection
-app.post("/create", async (req, res) => {
-  //assigning the creation of a new entry to a variable
+//adding a new entry into MongdoDb
 const newEntry = new Entry({
-  date: req.body.date,
+  date: new Date(),
   email: req.body.email,
   subject: req.body.subject,
   message: req.body.message,
 })
 
-  //saving the new entry to the Model
-  await newEntry.save()
+//saving the new entry to the Model
+await newEntry.save()
 
-  //redirecting to the home page - Does not use react router
-// res.redirect("/")
 });
+
