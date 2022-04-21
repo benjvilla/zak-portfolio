@@ -1,12 +1,20 @@
+/* Applies to everything */
+* {
+  box-sizing: border-box;
+  font-family: roboto, sans-serif;
+}
+
 /*--------------- App.js -----------------*/
 
-/*Navigation style on all pages*/
+/* Navigation style on all pages */
 .nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #102F42;
+  background-color: #102f42;
   color: white;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 /* Nav bar text */
@@ -30,10 +38,10 @@ nav a:hover {
 /* Skip link style on all pages */
 .skip-link {
   position: absolute;
-  width: .25rem;
-  height: .25rem;
+  width: 0.25rem;
+  height: 0.25rem;
   padding: 0;
-  margin: -.25rem;
+  margin: -0.25rem;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
@@ -54,15 +62,16 @@ nav a:hover {
 
 /* Body of every page */
 .main {
-  /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
   position: relative;
-  min-height: 100vh;
+  min-height: 93vh;
 }
 
 /* Body of every page - wrapped */
 #content-wrap {
   /* Footer height */
   padding-bottom: 10rem;
+  width: 100vw;
+  min-height: 93vh;
 }
 
 /* Footer */
@@ -89,8 +98,14 @@ footer a:hover {
 .logos {
   display: flex;
   justify-content: center;
-  height: 3vh;
+  height: 2.5vh;
   margin: 1rem;
+}
+
+/* Logos - hover color white */
+.logos a:hover {
+  filter: invert(100%) sepia(1%) saturate(389%) hue-rotate(159deg)
+    brightness(119%) contrast(100%);
 }
 
 /* Social media logos */
@@ -101,12 +116,13 @@ footer a:hover {
   align-items: center;
   position: absolute;
   bottom: 0;
-  height: 15vh;
+  height: 13vh;
   width: 100vw;
-  background-color: #5F7B81;
+  background-color: #5f7b81;
 }
 
-@media (max-width: 1200px) {
+/* Screens under 1300px */
+@media (max-width: 1300px) {
   .body {
     display: flex;
     flex-direction: column;
@@ -117,39 +133,46 @@ footer a:hover {
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    min-height: 84vh;
   }
   .nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100vw;
   }
   .footer {
     display: flex;
     align-items: center;
     word-wrap: normal;
+    width: 100vw;
   }
   .logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
+    height: 1.5rem;
   }
   .footerWithSocials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
+    height: auto;
+    bottom: 0;
+  }
+  #content-wrap {
+    padding-bottom: 7rem;
   }
 }
 
-@media (max-width: 510px) {
+/* Screens under 300px */
+@media (max-width: 350px) {
   .nav {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
-  .footerWithSocials {
-    width: 100%;
-    height: auto;
+  .logos {
+    height: 1.5rem;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+  }
+  #content-wrap {
+    padding-bottom: 12rem;
   }
 }
 
@@ -161,9 +184,18 @@ footer a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #5F7B81;
+  background-color: #5f7b81;
   color: white;
   padding: 2rem;
+  width: 100vw;
+}
+
+/* "Hi, I'm Zak" */
+.zakHeader {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  /* -webkit-text-stroke: 2px black; */
 }
 
 /* "Learning Experience Designer" */
@@ -171,6 +203,7 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 /* Tags in hero image */
@@ -178,7 +211,7 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5F7B81;
+  background-color: #5f7b81;
   color: white;
 }
 
@@ -188,33 +221,39 @@ footer a:hover {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  margin: 1rem;
   margin-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 /* Container with text and first photo */
 .homeThen {
   display: flex;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
-  border-style: ridge;
-  background-color: #D9DBDD;
 }
 
 /* Container with text and second photo */
 .homeNow {
   display: flex;
-  margin-top: 1.5rem;
-  border-style: ridge;
-  background-color: #D9DBDD;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background-color: #e7eaed;
+}
+
+/* Title and text together */
+.textWithTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem;
 }
 
 /* Just the first paragraph of text */
 .thenText {
-  display: flex;
-  align-items: center;
-  margin: 2rem;
-  font-size: large;
+  margin-top: 2rem;
+  font-size: larger;
 }
 
 /* Image in first section */
@@ -227,10 +266,8 @@ footer a:hover {
 
 /* Just the second paragraph of text */
 .nowText {
-  display: flex;
-  align-items: center;
-  margin: 2rem;
-  font-size: large;
+  margin-top: 2rem;
+  font-size: larger;
 }
 
 /* Image in second section */
@@ -241,16 +278,7 @@ footer a:hover {
   max-height: 500px;
 }
 
-/* Text for below Testimonials */
-.testimonialsText {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-size: large;
-  margin-top: 1rem;
-}
-
-/*  */
+/* Testimonials header */
 .testimonials {
   display: flex;
   flex-direction: column;
@@ -259,11 +287,44 @@ footer a:hover {
   margin-top: 2rem;
 }
 
-/* Carousel at the bottom of Testimonials*/
-.carousel {
-  margin: 1rem;
+/* Text for below testimonials */
+.testimonialsText {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: larger;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
 }
 
+/* Carousel at the bottom of Testimonials*/
+/* The whole carousel */
+.mainCarousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  margin-bottom: 2rem;
+}
+/* The carousel container */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+/* Where text is housed in carousel */
+.carousel-item .carousel-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 8rem;
+}
+/* Carousel image */
+.carousel-item img {
+  margin-bottom: 8rem !important;
+}
+/* The actual text */
 .carouselText {
   display: flex;
   justify-content: center;
@@ -271,19 +332,27 @@ footer a:hover {
   font-size: large;
 }
 
-.mainCarousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40vw;
+/* Screen under 1500px */
+@media (max-width: 1500px) {
+  .homeBody {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 
-/* Screens under 800px */
-@media (max-width: 800px) {
+/* Screen under 1200px */
+@media (max-width: 1200px) {
   .homeThen {
     display: flex;
     flex-direction: column-reverse;
   }
+  .textWithTitle {
+    margin: 3rem;
+  }
+}
+
+/* Screens under 800px */
+@media (max-width: 850px) {
   .thenImage {
     margin-top: 2rem;
   }
@@ -310,18 +379,39 @@ footer a:hover {
   .heroOverlay {
     text-align: center;
   }
+  .homeBody {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
   .carousel {
     width: 100vw;
   }
   .carouselText {
-    font-size: 65%;
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 300px) {
+  .homeBody {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
   }
 }
 
 /*--------------- Portfolio Page -----------------*/
 
+/* Portfolio body */
+.portfolioContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
 /* Top of page header */
-.PortfolioHeader{
+.PortfolioHeader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -329,41 +419,38 @@ footer a:hover {
   margin-top: 2rem;
 }
 
-/* All cards on page */
-.card{
-  margin: 1rem;
-}
-
 /* Card style */
 .col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
 }
 
-/* Portfolio body */
-.container {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-  margin-top: 2rem;
-}
-
+/* Each individual card */
 .individualCard {
   width: 50rem;
+}
+
+/* Screens under 1700px */
+@media (max-width: 1700px) {
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Screens under 800px */
 @media (max-width: 800px) {
   .individualCard {
-  width: 20rem;
-}
-.PortfolioHeader {
-  text-align: center;
-  font-size: x-large;
-  margin: 2rem;
-}
+    width: 20rem;
+  }
+  .PortfolioHeader {
+    text-align: center;
+    font-size: x-large;
+    margin: 2rem;
+  }
 }
 
 /*--------------- Materials Page -----------------*/
@@ -386,13 +473,14 @@ footer a:hover {
   padding-bottom: 1rem;
 }
 
+/* The images on materials page */
+.avatar-square {
+  width: 30rem;
+}
+
 /* Buttons on materials page */
 .button {
   margin: 1rem;
-}
-
-.avatar-square {
-  width: 30rem;
 }
 
 /* Screens under 525px */
@@ -408,8 +496,15 @@ footer a:hover {
 .contactBody {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
+}
+
+/* Form page container */
+.formContainer {
+  margin-top: 5rem;
 }
 
 /* Text at the top of contact page */

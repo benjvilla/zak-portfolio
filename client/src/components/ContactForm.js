@@ -66,7 +66,9 @@ export default function ContactForm() {
 
   return (
     <>
-      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+      <Form className="formContainer" noValidate validated={validated} onSubmit={handleSubmit}>
+        {/* Required fields text */}
+        <p className="mt-5">Required fields are marked with an asterisk (*)</p>
         {/* Name */}
         <Form.Group className="mt-3" controlId="formBasicName">
           <Form.Label For="name">Name *</Form.Label>

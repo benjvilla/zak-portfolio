@@ -81,7 +81,7 @@ export default function PortfolioCards() {
   return (
     <>
       <Container fluid="md">
-        <div className="container">
+        <div className="portfolioContainer">
           <div className="col">
             {/* Card 1 */}
             <Card className="individualCard">
