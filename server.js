@@ -1,3 +1,6 @@
+//env file
+require("dotenv").config();
+
 //importing mongoose
 const mongoose = require("mongoose")
 
@@ -11,7 +14,7 @@ const cors = require("cors")
 const ServerSchema = require('./ServerSchema');
 
 //creating initial connection to the database 
-mongoose.connect("mongodb://localhost:27017/zakPortfolio", {
+mongoose.connect(`mongodb+srv://${process.env.USERDB}:${process.env.PASSDB}@cluster0.d4xw9.mongodb.net/test`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -29,8 +32,6 @@ const app = express();
 
 //nodemailer 
 const nodemailer = require("nodemailer");
-//env file
-require("dotenv").config();
 
 //binds error message to the connection variable to print if an error occurs
 db.on('error', console.error.bind(console, 'connection error'))
