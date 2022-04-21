@@ -63,7 +63,7 @@ nav a:hover {
 /* Body of every page */
 .main {
   position: relative;
-  min-height: 90vh;
+  min-height: 93vh;
 }
 
 /* Body of every page - wrapped */
@@ -71,6 +71,7 @@ nav a:hover {
   /* Footer height */
   padding-bottom: 10rem;
   width: 100vw;
+  min-height: 93vh;
 }
 
 /* Footer */
@@ -120,7 +121,7 @@ footer a:hover {
   background-color: #5f7b81;
 }
 
-/* Screens under 1200px */
+/* Screens under 1300px */
 @media (max-width: 1300px) {
   .body {
     display: flex;
@@ -135,9 +136,6 @@ footer a:hover {
     min-height: 84vh;
   }
   .nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100vw;
   }
   .footer {
@@ -151,6 +149,7 @@ footer a:hover {
   }
   .footerWithSocials {
     height: auto;
+    bottom: 0;
   }
   #content-wrap {
     padding-bottom: 7rem;
@@ -159,6 +158,10 @@ footer a:hover {
 
 /* Screens under 300px */
 @media (max-width: 350px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
   .logos {
     height: 1.5rem;
   }
@@ -191,6 +194,7 @@ footer a:hover {
 .zakHeader {
   font-size: 3rem;
   margin-bottom: 1rem;
+  text-align: center;
   /* -webkit-text-stroke: 2px black; */
 }
 
@@ -387,6 +391,13 @@ footer a:hover {
   }
 }
 
+@media (max-width: 300px) {
+  .homeBody {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+}
+
 /*--------------- Portfolio Page -----------------*/
 
 /* Portfolio body */
@@ -411,8 +422,8 @@ footer a:hover {
 /* Card style */
 .col {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
 }
