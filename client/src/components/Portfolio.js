@@ -11,7 +11,7 @@ import Cards from "./PortfolioCards.js"
 export default function Portfolio() {
   return (
     <>
-      <h2 className="PortfolioHeader">Here is some work that I have done</h2>
+      <h2 className="PortfolioHeader">What I've Done</h2>
     {/* importing cards component  */}
       <Cards/>
     </>

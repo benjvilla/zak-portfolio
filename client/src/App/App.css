@@ -70,7 +70,7 @@ nav a:hover {
 #content-wrap {
   /* Footer height */
   padding-bottom: 10rem;
-  width: 100vw;
+  width: 100%;
   min-height: 93vh;
 }
 
@@ -116,8 +116,8 @@ footer a:hover {
   align-items: center;
   position: absolute;
   bottom: 0;
-  height: 13vh;
-  width: 100vw;
+  height: 14vh;
+  width: 100%;
   background-color: #5f7b81;
 }
 
@@ -126,23 +126,23 @@ footer a:hover {
   .body {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
   }
   .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     min-height: 84vh;
   }
   .nav {
-    width: 100vw;
+    width: 100%;
   }
   .footer {
     display: flex;
     align-items: center;
     word-wrap: normal;
-    width: 100vw;
+    width: 100%;
   }
   .logos {
     height: 1.5rem;
@@ -186,8 +186,8 @@ footer a:hover {
   align-items: center;
   background-color: #5f7b81;
   color: white;
-  padding: 2rem;
-  width: 100vw;
+  /* padding: 2rem; */
+  width: 100%;
 }
 
 /* "Hi, I'm Zak" */
@@ -292,7 +292,7 @@ footer a:hover {
   display: flex;
   align-items: center;
   text-align: center;
-  font-size: larger;
+  font-size: large;
   margin-top: 1rem;
   margin-bottom: -1rem;
 }
