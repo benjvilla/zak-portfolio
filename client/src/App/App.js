@@ -32,14 +32,12 @@ export default function App() {
 
       <main className="main" id="main-content">
         <div id="content-wrap">
-          <content>
-            <Routes>
-              <Route index element={<Home />} />
-              <Route path="portfolio" element={<Portfolio />} />
-              <Route path="materials" element={<Materials />} />
-              <Route path="contact" element={<Contact />} />
-            </Routes>
-          </content>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="portfolio" element={<Portfolio />} />
+            <Route path="materials" element={<Materials />} />
+            <Route path="contact" element={<Contact />} />
+          </Routes>
         </div>
 
         <section className="footerWithSocials">
