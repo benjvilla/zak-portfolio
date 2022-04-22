@@ -33,6 +33,9 @@ const app = express();
 //nodemailer 
 const nodemailer = require("nodemailer");
 
+// axios for api fetching
+const axios = require("axios");
+
 //binds error message to the connection variable to print if an error occurs
 db.on('error', console.error.bind(console, 'connection error'))
 
@@ -45,6 +48,19 @@ app.use("/", router);
 
 //creating the entry model utilizing the entry schema and entries collection
 const Entry = mongoose.model("entries", ServerSchema)
+
+// url for api fetch
+let url = 'https://zakariahrittenhouse.talentlms.com/api/v1/courses/'
+
+// create api route for Materials page to access LMS
+app.get("/materials", (req, res) => {
+  axios.get(url, {auth: {
+    username: process.env.APIKEY
+  }}).then(function (response) {
+    res.json(response.data)
+    console.log(response.data)
+  })
+});
 
 app.listen(port,()=>{
     console.log(`Listening on port: ${port}`)
