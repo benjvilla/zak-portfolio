@@ -406,7 +406,7 @@ footer a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
+  margin-bottom: 1rem;
   margin-top: 2rem;
 }
 
@@ -421,16 +421,33 @@ footer a:hover {
 
 /* Card style */
 .col {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
+  grid-row-gap: 2rem; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: max-content;
+  flex-flow: row wrap;
+  counter-reset: brick;
+  width: 95vw;
+
+  /* display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: masonry; */
 }
 
 /* Each individual card */
 .individualCard {
-  width: 50rem;
+  width: 50vw;
+  flex: 1 0 calc(50% - 2rem);
+  margin: 1rem;
 }
 
 /* Screens under 1700px */
@@ -438,14 +455,15 @@ footer a:hover {
   .col {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .individualCard {
+    width: 60vw;
   }
 }
 
 /* Screens under 800px */
 @media (max-width: 800px) {
-  .individualCard {
-    width: 20rem;
-  }
   .PortfolioHeader {
     text-align: center;
     font-size: x-large;
