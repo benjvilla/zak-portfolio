@@ -2,7 +2,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 // imports for return
-import { Card, Container, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Card, Container, ListGroup, ListGroupItem, Row, Col } from "react-bootstrap";
 
 //Materials page content
 export default function Materials() {
@@ -18,11 +18,9 @@ export default function Materials() {
 
       // fetch to server on Materials page load
       let fetchResponse = await fetch("http://localhost:5000/materials")
-      console.log(fetchResponse)
 
       // assign response stream and return promise
       let courseData = await fetchResponse.json()
-      console.log(courseData)
       
       //
       setAllCourses(courseData)
@@ -32,41 +30,50 @@ export default function Materials() {
 
     // runs on initial render
   }, []);
-console.log(allCourses)
 
   /* content returned to Materials page */
   return (
     <div className="materialsBody">
       {/* header for materials page */}
-      <h2 className="materialsHeader">Materials Page! (placeholder)</h2>
+      <h2 className="materialsHeader">Learning Materials from TalentLMS</h2>
       
-      {/* */}
+      {/* map api data to variable for use in return */}
+      <Row>
       {allCourses.map((course) => {
         return (
+          <Col>
           <Container>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+            <Card style={{ width: '20rem' }}>
+              <Card.Img 
+                src={course.big_avatar} 
+                alt={course.name}
+                />
               <Card.Body>
                 <Card.Title>{course.name}</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
+                  {course.description}
                 </Card.Text>
               </Card.Body>
               <ListGroup className="list-group-flush">
-                <ListGroupItem>Cras justo odio</ListGroupItem>
-                <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                <ListGroupItem>Created on: {course.creation_date}</ListGroupItem>
+                <ListGroupItem>Last Updated: {course.last_update_on}</ListGroupItem>
+                <ListGroupItem>Price: {course.price}</ListGroupItem>
               </ListGroup>
               <Card.Body>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
+                <Card.Text> 
+                  Click the link below to visit the TalentLMS website!
+                </Card.Text>
+                <Card.Text> 
+                  *You will need to login to access these courses
+                </Card.Text>
+                <Card.Link href="#">Link to TalentLMS</Card.Link>
               </Card.Body>
             </Card>
           </Container>
+          </Col>
         )
       })}
-      
+      </Row>
     </ div>
   );
 }
