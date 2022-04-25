@@ -72,7 +72,6 @@ nav a:hover {
 #content-wrap {
   /* Footer height */
   padding-bottom: 10rem;
-  max-width: 100vw;
   min-height: 93vh;
 }
 
@@ -149,6 +148,17 @@ footer a:hover {
   }
   #content-wrap {
     padding-bottom: 7rem;
+    width: 100vw;
+  }
+}
+
+/* Screens under 830px */
+@media (max-width: 850px) {
+  #content-wrap {
+    /* Footer height */
+    padding-bottom: 10rem;
+    min-height: 93vh;
+    width: 100vw;
   }
 }
 
@@ -363,7 +373,7 @@ footer a:hover {
     margin-top: 2rem;
   }
   .carousel {
-    width: 100%;
+    width: 100vw;
   }
   .carouselText {
     font-size: 80%;
@@ -381,9 +391,6 @@ footer a:hover {
   .homeBody {
     margin-left: 1rem;
     margin-right: 1rem;
-  }
-  .carousel {
-    width: 100%;
   }
   .carouselText {
     font-size: 70%;
