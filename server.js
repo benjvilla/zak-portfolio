@@ -13,6 +13,16 @@ const cors = require("cors")
 //importing server schema
 const ServerSchema = require('./ServerSchema');
 
+// Accessing the path module
+const path = require("path");
+
+// Step 1 (import the client build folder to the server):
+app.use(express.static(path.resolve(__dirname, "./client/build")));
+// Step 2 (ensure that the routes defined with React Router are working once the application has been deployed -- redirects any requests to index.html):
+app.get("*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+});
+
 //creating initial connection to the database 
 mongoose.connect(`mongodb+srv://${process.env.USERDB}:${process.env.PASSDB}@cluster0.d4xw9.mongodb.net/test`, {
   useNewUrlParser: true,
