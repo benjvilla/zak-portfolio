@@ -111,6 +111,7 @@ contactEmail.sendMail(mail, (error) => {
 //adding a new entry into MongdoDb
 const newEntry = new Entry({
   date: new Date(),
+  name: req.body.name,
   email: req.body.email,
   subject: req.body.subject,
   message: req.body.message,
