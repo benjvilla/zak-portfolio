@@ -70,7 +70,7 @@ nav a:hover {
 #content-wrap {
   /* Footer height */
   padding-bottom: 10rem;
-  width: 100vw;
+  width: 100%;
   min-height: 93vh;
 }
 
@@ -117,7 +117,7 @@ footer a:hover {
   position: absolute;
   bottom: 0;
   height: 13vh;
-  width: 100vw;
+  width: 100%;
   background-color: #5f7b81;
 }
 
@@ -126,23 +126,23 @@ footer a:hover {
   .body {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
   }
   .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     min-height: 84vh;
   }
   .nav {
-    width: 100vw;
+    width: 100%;
   }
   .footer {
     display: flex;
     align-items: center;
     word-wrap: normal;
-    width: 100vw;
+    width: 100%;
   }
   .logos {
     height: 1.5rem;
@@ -187,7 +187,7 @@ footer a:hover {
   background-color: #5f7b81;
   color: white;
   padding: 2rem;
-  width: 100vw;
+  width: 100%;
 }
 
 /* "Hi, I'm Zak" */
@@ -260,7 +260,7 @@ footer a:hover {
 .thenImage {
   display: flex;
   align-self: center;
-  width: 40vw;
+  width: 40%;
   max-height: 400px;
 }
 
@@ -274,7 +274,7 @@ footer a:hover {
 .nowImage {
   display: flex;
   align-self: center;
-  width: 30vw;
+  width: 30%;
   max-height: 500px;
 }
 
@@ -290,8 +290,10 @@ footer a:hover {
 /* Text for below testimonials */
 .testimonialsText {
   display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  width: 80%;
   font-size: larger;
   margin-top: 1rem;
   margin-bottom: -1rem;
@@ -303,7 +305,7 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40vw;
+  width: 40%;
   margin-bottom: 2rem;
 }
 /* The carousel container */
@@ -364,7 +366,7 @@ footer a:hover {
     margin-top: 2rem;
   }
   .carousel {
-    width: 100vw;
+    width: 100%;
   }
   .carouselText {
     font-size: 80%;
@@ -384,7 +386,7 @@ footer a:hover {
     margin-right: 1rem;
   }
   .carousel {
-    width: 100vw;
+    width: 100%;
   }
   .carouselText {
     font-size: 70%;
@@ -421,11 +423,16 @@ footer a:hover {
 
 /* Card style */
 .col {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: masonry;
   grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
+  grid-row-gap: 2rem; */
 
   /* display: flex;
   flex-direction: column;
@@ -445,7 +452,8 @@ footer a:hover {
 
 /* Each individual card */
 .individualCard {
-  width: 45vw;
+  width: 85%;
+  margin-bottom: 1rem;
   /* flex: 1 0 calc(50% - 2rem);
   margin: 1rem; */
 }
@@ -458,7 +466,7 @@ footer a:hover {
     align-items: center;
   }
   .individualCard {
-    width: 60vw;
+    width: 90%;
   }
 }
 
@@ -504,7 +512,7 @@ footer a:hover {
 /* Screens under 525px */
 @media (max-width: 525px) {
   .avatar-square {
-    width: 70vw;
+    width: 70%;
   }
 }
 
