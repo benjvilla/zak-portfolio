@@ -421,13 +421,13 @@ footer a:hover {
 
 /* Card style */
 .col {
-  /* display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: masonry;
   grid-column-gap: 2rem;
-  grid-row-gap: 2rem; */
+  grid-row-gap: 2rem;
 
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -435,7 +435,7 @@ footer a:hover {
   height: max-content;
   flex-flow: row wrap;
   counter-reset: brick;
-  width: 95vw;
+  width: 95vw; */
 
   /* display: grid;
   gap: 1rem;
@@ -445,9 +445,9 @@ footer a:hover {
 
 /* Each individual card */
 .individualCard {
-  width: 50vw;
-  flex: 1 0 calc(50% - 2rem);
-  margin: 1rem;
+  width: 45vw;
+  /* flex: 1 0 calc(50% - 2rem);
+  margin: 1rem; */
 }
 
 /* Screens under 1700px */
