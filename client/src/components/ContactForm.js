@@ -49,7 +49,7 @@ export default function ContactForm() {
     };
 
     // Fetch from server
-    let response = await fetch("https://zak-portfolio-capstone.herokuapp.com/contact", {
+    let response = await fetch("/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
