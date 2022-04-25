@@ -1,3 +1,6 @@
+//env file
+require("dotenv").config();
+
 //importing mongoose
 const mongoose = require("mongoose")
 
@@ -10,8 +13,11 @@ const cors = require("cors")
 //importing server schema
 const ServerSchema = require('./ServerSchema');
 
+// Accessing the path module
+const path = require("path");
+
 //creating initial connection to the database 
-mongoose.connect("mongodb://localhost:27017/zakPortfolio", {
+mongoose.connect(`mongodb+srv://${process.env.USERDB}:${process.env.PASSDB}@cluster0.d4xw9.mongodb.net/test`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -29,8 +35,9 @@ const app = express();
 
 //nodemailer 
 const nodemailer = require("nodemailer");
-//env file
-require("dotenv").config();
+
+// axios for api fetching
+const axios = require("axios");
 
 //binds error message to the connection variable to print if an error occurs
 db.on('error', console.error.bind(console, 'connection error'))
@@ -44,6 +51,26 @@ app.use("/", router);
 
 //creating the entry model utilizing the entry schema and entries collection
 const Entry = mongoose.model("entries", ServerSchema)
+
+// url for api fetch
+let url = 'https://zakariahrittenhouse.talentlms.com/api/v1/courses/'
+
+// create api route for Materials page to access LMS
+app.get("/materials", (req, res) => {
+  axios.get(url, {auth: {
+    username: process.env.APIKEY
+  }}).then(function (response) {
+    res.json(response.data)
+    console.log(response.data)
+  })
+});
+
+// Step 1 (import the client build folder to the server):
+app.use(express.static(path.resolve(__dirname, "./client/build")));
+// Step 2 (ensure that the routes defined with React Router are working once the application has been deployed -- redirects any requests to index.html):
+app.get("*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+});
 
 app.listen(port,()=>{
     console.log(`Listening on port: ${port}`)
@@ -94,6 +121,7 @@ contactEmail.sendMail(mail, (error) => {
 //adding a new entry into MongdoDb
 const newEntry = new Entry({
   date: new Date(),
+  name: req.body.name,
   email: req.body.email,
   subject: req.body.subject,
   message: req.body.message,
