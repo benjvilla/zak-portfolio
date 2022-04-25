@@ -1,3 +1,6 @@
+//env file
+require("dotenv").config();
+
 //importing mongoose
 const mongoose = require("mongoose")
 
@@ -11,7 +14,7 @@ const cors = require("cors")
 const ServerSchema = require('./ServerSchema');
 
 //creating initial connection to the database 
-mongoose.connect("mongodb://localhost:27017/zakPortfolio", {
+mongoose.connect(`mongodb+srv://${process.env.USERDB}:${process.env.PASSDB}@cluster0.d4xw9.mongodb.net/test`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -29,8 +32,9 @@ const app = express();
 
 //nodemailer 
 const nodemailer = require("nodemailer");
-//env file
-require("dotenv").config();
+
+// axios for api fetching
+const axios = require("axios");
 
 //binds error message to the connection variable to print if an error occurs
 db.on('error', console.error.bind(console, 'connection error'))
@@ -44,6 +48,19 @@ app.use("/", router);
 
 //creating the entry model utilizing the entry schema and entries collection
 const Entry = mongoose.model("entries", ServerSchema)
+
+// url for api fetch
+let url = 'https://zakariahrittenhouse.talentlms.com/api/v1/courses/'
+
+// create api route for Materials page to access LMS
+app.get("/materials", (req, res) => {
+  axios.get(url, {auth: {
+    username: process.env.APIKEY
+  }}).then(function (response) {
+    res.json(response.data)
+    console.log(response.data)
+  })
+});
 
 app.listen(port,()=>{
     console.log(`Listening on port: ${port}`)
@@ -68,7 +85,7 @@ contactEmail.verify((error) => {
 });
 
 // setting up the router to send an email
-router.post("/contact", (req,res) => {
+router.post("/contact", async(req,res) => {
 const name = req.body.name;
 const email = req.body.email;
 const subject = req.body.subject;
@@ -91,21 +108,17 @@ contactEmail.sendMail(mail, (error) => {
   }
 });
 
-});
-
-  //CREATE functionality for inserting a new entry into our collection
-app.post("/create", async (req, res) => {
-  //assigning the creation of a new entry to a variable
+//adding a new entry into MongdoDb
 const newEntry = new Entry({
-  date: req.body.date,
+  date: new Date(),
+  name: req.body.name,
   email: req.body.email,
   subject: req.body.subject,
   message: req.body.message,
 })
 
-  //saving the new entry to the Model
-  await newEntry.save()
+//saving the new entry to the Model
+await newEntry.save()
 
-  //redirecting to the home page - Does not use react router
-// res.redirect("/")
 });
+

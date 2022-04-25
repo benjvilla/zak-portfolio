@@ -12,7 +12,6 @@ export default function Contact() {
           Freelance Work? Consulting? Prospective Employment? Speaking
           Engagement? Coffee and Nerd Talk? I can't wait to connect with you!
         </h4>
-        <p className="mt-5">Required fields are marked with an asterisk (*)</p>
         {/* Importing contact form */}
         <Form />
       </Container>
