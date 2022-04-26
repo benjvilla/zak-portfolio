@@ -17,7 +17,7 @@ export default function Materials() {
     let getCourses = async () => {
 
       // fetch to server on Materials page load
-      let fetchResponse = await fetch("http://localhost:5000/materials")
+      let fetchResponse = await fetch("/materials")
 
       // assign response stream and return promise
       let courseData = await fetchResponse.json()
