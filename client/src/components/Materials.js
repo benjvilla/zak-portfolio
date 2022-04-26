@@ -2,7 +2,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 // imports for return
-import { Card, Container, ListGroup, ListGroupItem, Row, Col } from "react-bootstrap";
+import { Card, Container, Accordion, ListGroup, ListGroupItem, Row, Col } from "react-bootstrap";
 
 //Materials page content
 export default function Materials() {
@@ -48,26 +48,36 @@ export default function Materials() {
                 src={course.big_avatar} 
                 alt={course.name}
                 />
-              <Card.Body>
-                <Card.Title>{course.name}</Card.Title>
-                <Card.Text>
-                  {course.description}
-                </Card.Text>
-              </Card.Body>
-              <ListGroup className="list-group-flush">
-                <ListGroupItem>Created on: {course.creation_date}</ListGroupItem>
-                <ListGroupItem>Last Updated: {course.last_update_on}</ListGroupItem>
-                <ListGroupItem>Price: {course.price}</ListGroupItem>
-              </ListGroup>
-              <Card.Body>
-                <Card.Text> 
-                  Click the link below to visit the TalentLMS website!
-                </Card.Text>
-                <Card.Text> 
-                  *You will need to login to access these courses
-                </Card.Text>
-                <Card.Link href="#">Link to TalentLMS</Card.Link>
-              </Card.Body>
+              <Accordion>
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>{course.name}</Accordion.Header>
+                  <Accordion.Body>
+                  <Card.Body>
+                    <Card.Text>
+                      {course.description}
+                    </Card.Text>
+                  </Card.Body>
+                  <ListGroup className="list-group-flush">
+                    <ListGroupItem>Created on: {course.creation_date}</ListGroupItem>
+                    <ListGroupItem>Last Updated: {course.last_update_on}</ListGroupItem>
+                  </ListGroup>
+                  <Card.Body>
+                    <Card.Text> 
+                      Click the link below to visit the TalentLMS website!
+                    </Card.Text>
+                    <Card.Text> 
+                      *You will need to login to access these courses
+                    </Card.Text>
+                    <Card.Link 
+                      href="https://zakariahrittenhouse.talentlms.com/dashboard" 
+                      target="_blank"
+                    >
+                      Link to TalentLMS
+                    </Card.Link>
+                  </Card.Body>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
             </Card>
           </Container>
           </Col>
