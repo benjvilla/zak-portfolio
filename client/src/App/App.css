@@ -71,7 +71,7 @@ nav a:hover {
 /* Body of every page - wrapped */
 #content-wrap {
   /* Footer height */
-  padding-bottom: 20rem;
+  padding-bottom: 150px;
   min-height: 60vh;
 }
 
@@ -125,7 +125,7 @@ footer a:hover {
 /* Screens under 1800px */
 @media (max-width: 1800px) {
 #content-wrap {
-  padding-bottom: 8rem;
+  padding-bottom: 100px;
 }
 }
 
@@ -155,7 +155,7 @@ footer a:hover {
     width: 100vw;
   }
   #content-wrap {
-    padding-bottom: 7rem;
+    padding-bottom: 169px;
     width: 100vw;
   }
 }
@@ -166,9 +166,8 @@ footer a:hover {
     width: 100%;
   }
   #content-wrap {
-    /* Footer height */
-    padding-bottom: 10rem;
-    min-height: 93vh;
+    padding-bottom: 150px;
+    min-height: 91vh;
     width: 100vw;
   }
 }
@@ -189,7 +188,7 @@ footer a:hover {
     text-align: center;
   }
   #content-wrap {
-    padding-bottom: 12rem;
+    padding-bottom: 150px;
   }
 }
 
