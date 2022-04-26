@@ -64,15 +64,15 @@ nav a:hover {
 /* Body of every page */
 .body {
   position: relative;
-  min-height: 93vh;
+  min-height: 100vh;
   max-width: 100%;
 }
 
 /* Body of every page - wrapped */
 #content-wrap {
   /* Footer height */
-  padding-bottom: 10rem;
-  min-height: 93vh;
+  padding-bottom: 20rem;
+  min-height: 60vh;
 }
 
 /* Footer */
@@ -117,9 +117,16 @@ footer a:hover {
   align-items: center;
   position: absolute;
   bottom: 0;
-  height: 14vh;
+  height: 13vh;
   width: 100%;
   background-color: #5f7b81;
+}
+
+/* Screens under 1800px */
+@media (max-width: 1800px) {
+#content-wrap {
+  padding-bottom: 8rem;
+}
 }
 
 /* Screens under 1300px */
@@ -128,7 +135,7 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 98.75%;
     min-height: 84vh;
   }
   .nav {
@@ -145,6 +152,7 @@ footer a:hover {
   .footerWithSocials {
     height: auto;
     bottom: 0;
+    width: 100vw;
   }
   #content-wrap {
     padding-bottom: 7rem;
@@ -154,6 +162,9 @@ footer a:hover {
 
 /* Screens under 830px */
 @media (max-width: 850px) {
+  .body {
+    width: 100%;
+  }
   #content-wrap {
     /* Footer height */
     padding-bottom: 10rem;
