@@ -35,7 +35,7 @@ export default function Materials() {
   return (
     <div className="materialsBody">
       {/* header for materials page */}
-      <h2 className="materialsHeader">Learning Materials from TalentLMS</h2>
+      <h2 className="materialsHeader">E-Learning Content From TalentLMS</h2>
       
       {/* map api data to variable for use in return */}
       <Row>
