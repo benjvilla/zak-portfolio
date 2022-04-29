@@ -4,6 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 
 export default function Contact() {
+
+  document.title = "Zakariah Rittenhouse - Contact"
+  
   return (
     <div className="contactBody">
       {/* Content in center of page */}

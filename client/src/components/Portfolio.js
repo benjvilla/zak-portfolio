@@ -9,6 +9,9 @@ import ZakBrand from "../images/ZakPersonalBrand.png";
 import Cards from "./PortfolioCards.js"
 
 export default function Portfolio() {
+
+  document.title = "Zakariah Rittenhouse - Portfolio"
+
   return (
     <>
       <h2 className="PortfolioHeader">What I've Done</h2>

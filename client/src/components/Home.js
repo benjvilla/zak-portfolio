@@ -5,6 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // Home page content
 export default function Home() {
+
+  document.title = "Zakariah Rittenhouse - Home"
+  
   return (
     <main className="homePage">
       {/* Banner under nav */}
