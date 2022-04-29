@@ -42,7 +42,7 @@ export default function Materials() {
       {allCourses.map((course) => {
         return (
           <Col>
-          <Container>
+          <Container className="materialCards">
             <Card style={{ width: '20rem' }}>
               <Card.Img 
                 src={course.big_avatar} 

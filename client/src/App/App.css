@@ -503,14 +503,10 @@ footer a:hover {
   padding-bottom: 1rem;
 }
 
-/* The images on materials page */
-.avatar-square {
-  width: 30rem;
-}
-
-/* Buttons on materials page */
-.button {
-  margin: 1rem;
+/*  */
+.materialCard {
+  display: flex;
+  
 }
 
 /* Screens under 525px */
