@@ -503,6 +503,7 @@ footer a:hover {
   align-items: center;
   margin: 1rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Header on E-Learning page */
@@ -513,10 +514,11 @@ footer a:hover {
   padding-bottom: 1rem;
 }
 
-/*  */
-.materialCard {
+/* Each individual card */
+.materialCards {
   display: flex;
-  
+  justify-content: center;
+  align-items: center;
 }
 
 /* Screens under 525px */

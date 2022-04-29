@@ -35,6 +35,7 @@ export default function Materials() {
 
   /* content returned to Materials page */
   return (
+    
     <div className="materialsBody">
       {/* header for materials page */}
       <h2 className="materialsHeader">E-Learning Content From TalentLMS</h2>

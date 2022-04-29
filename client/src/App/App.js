@@ -35,7 +35,7 @@ export default function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="portfolio" element={<Portfolio />} />
-            <Route path="materials" element={<Materials />} />
+            <Route path="e-learning" element={<Materials />} />
             <Route path="contact" element={<Contact />} />
           </Routes>
         </div>
