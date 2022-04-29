@@ -55,8 +55,8 @@ const Entry = mongoose.model("entries", ServerSchema)
 // url for api fetch
 let url = 'https://zakariahrittenhouse.talentlms.com/api/v1/courses/'
 
-// create api route for Materials page to access LMS
-app.get("/materials", (req, res) => {
+// create api route for the E-Learning page to access LMS
+app.get("/e-learning", (req, res) => {
   axios.get(url, {auth: {
     username: process.env.APIKEY
   }}).then(function (response) {

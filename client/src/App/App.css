@@ -422,7 +422,7 @@ footer a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
@@ -466,7 +466,7 @@ footer a:hover {
 
 /* Each individual card */
 .individualCard {
-  width: 85%;
+  width: 70%;
   margin-bottom: 1rem;
   /* flex: 1 0 calc(50% - 2rem);
   margin: 1rem; */
@@ -495,7 +495,7 @@ footer a:hover {
 
 /*--------------- Materials Page -----------------*/
 
-/* Materials page body */
+/* E-Learning page body */
 .materialsBody {
   display: flex;
   flex-direction: column;
@@ -505,7 +505,7 @@ footer a:hover {
   margin-top: 2rem;
 }
 
-/* Header on materials page */
+/* Header on E-Learning page */
 .materialsHeader {
   display: flex;
   justify-content: center;
@@ -513,12 +513,12 @@ footer a:hover {
   padding-bottom: 1rem;
 }
 
-/* The images on materials page */
+/* The images on E-Learning page */
 .avatar-square {
   width: 30rem;
 }
 
-/* Buttons on materials page */
+/* Buttons on E-Learning page */
 .button {
   margin: 1rem;
 }
@@ -540,6 +540,7 @@ footer a:hover {
   align-items: center;
   margin: 1rem;
   margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 /* Form page container */
@@ -571,6 +572,7 @@ footer a:hover {
   border-radius: 0.25rem;
 }
 
+/* For screens under 1000px */
 @media (max-width: 1000px) {
   .text-center {
     margin-left: 5rem;
@@ -578,6 +580,7 @@ footer a:hover {
   }
 }
 
+/* For screens under 500px */
 @media (max-width: 500px) {
   .text-center {
     margin-left: 2rem;
